@@ -2,19 +2,26 @@ let arr = new Array()
 
 function criarElemento() {
 
-    const valorInput = document.querySelector(".text").value
+    const valorInput = document.querySelector(".input-01").value
     
     const divMostrar = document.querySelector(".mostrar")
     
     const divContainer = document.createElement("div")
+    divContainer.className = "c-div"
+    
     const buttonCheck = document.createElement('input')
     buttonCheck.setAttribute("type", "checkbox")
 
     const buttonExcluir = document.createElement('button')
-    buttonExcluir.innerHTML= "Excluir"
+    buttonExcluir.innerHTML= "X"
 
     buttonCheck.addEventListener("click", () => {
-        paragrafo.style.textDecoration = "line-through"
+        if (buttonCheck.checked) {
+            paragrafo.style.textDecoration = "line-through"
+        } else {
+            paragrafo.style.textDecoration = "none"
+        }
+        
     })
     
     const paragrafo = document.createElement("p")
@@ -28,9 +35,12 @@ function criarElemento() {
         paragrafo.remove()
     }
 
-    divContainer.appendChild(buttonExcluir)
-    paragrafo.append(buttonCheck)
+    //paragrafo.append(buttonCheck)
     divMostrar.appendChild(paragrafo)
+    divContainer.appendChild(paragrafo)
+    divContainer.appendChild(buttonCheck)
+    divContainer.appendChild(buttonExcluir)
+    
     divMostrar.appendChild(divContainer)
     
     return valorInput

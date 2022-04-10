@@ -4,8 +4,96 @@
     box-sizing: border-box;
 }
 .c-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 .mostrar{
-    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 10px;
+    width: 55%;
+    height: 70vh;
+    overflow-y: auto;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius:5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius:5px;
+  }
+  
+  /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.068);
+    border-radius: 3px;
+    padding: 5px 5px;
+    width: 300px;
+    word-wrap: break-word;
+    height: auto;
+    
+}
+.c-div{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50vw;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+
+    margin: 10px;
+}
+/*input e botão*/
+
+.forms .input-01{
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 250px;
+}
+.forms .button-01{
+    background-color: #43bc70;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+}
+button{
+    border: 0;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
